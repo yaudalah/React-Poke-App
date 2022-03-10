@@ -1,27 +1,31 @@
 import "./Style.css"
 
-function Card({pokemon}) {
+function Card({pokemon, navigate}) {
 
     return(
         <>
             {
-                pokemon.map(p => {
+                pokemon.map(pokemon => {
                     return (
                         <div className="card">
                             <div>
-                                <img src={p.data?.sprites?.front_default} alt='Digimon' />
+                                <span onClick={() => {
+                                    navigate(`/description/${pokemon?.data?.id}`)
+                                }}
+                                >
+                                    <img src={pokemon?.data?.sprites?.front_default} alt='Digimon' />
+                                </span>
                             </div>
-                            <div className="card-name">{p.data?.name}</div>
-                            <div className="description">
-                                <p>Base EXP: {p.data?.base_experience}</p>
-                                <p>Weight: {p.data?.weight}</p>
-                                <p>Height: {p.data?.height}</p>
+                            <div className="card-name">
+                                {pokemon?.data?.name}
                             </div>
-                            <button title='Add to PokeDex'>+</button>
+                            <button className="btn-add" title="add to Pokedex">
+                                +
+                            </button>
                         </div>
                     )
                 })    
-            }
+            }   
         </>
     )
 

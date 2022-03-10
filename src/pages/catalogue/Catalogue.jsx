@@ -3,11 +3,12 @@ import {getPokemonsDetails } from '../../services/axios'
 import "./Style.css"
 import "../../App.css"
 import Card from '../../component/card/Card'
+import { useNavigate} from 'react-router-dom'
 
 
 const Catalouge = () => {
-
-    const [pokemon, setPokemon] = useState([])    
+    const navigate = useNavigate();
+    const [pokemon, setPokemon] = useState([]);
 
     useEffect(()=> {
         fetchPokeDetails();
@@ -29,7 +30,7 @@ const Catalouge = () => {
         <> 
             <h1>Catch'em</h1>
             <div className="container">
-                <Card pokemon={pokemon}/>      
+                <Card  pokemon={pokemon} navigate={navigate} />      
             </div>
         </>
     )

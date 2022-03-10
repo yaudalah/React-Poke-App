@@ -8,14 +8,15 @@
     align-items: center;
     background-color: #114f79;
     color: #f0f0f0;
-    width: 20%;
+    width: 21%;
     height: 0;
     position: relative;
     padding-bottom: 30%;
     border-radius: 15px;
 }
 
-.card > div > img {
+.card > div > span > img {
+    cursor: pointer;
     width: 150px;
 }
 
@@ -33,7 +34,7 @@
     background-color: rgba(0, 0, 0, 0.404);
 }
 
-button {
+.btn-add {
     display: flex;
     justify-content: center;
     flex-direction: column;
