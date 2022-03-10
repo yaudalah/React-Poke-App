@@ -1,0 +1,13 @@
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    display: flex;
+    background-color: #fafafa;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    column-gap: 5%;
+    row-gap: 1em;
+    margin: 1em;
+}
