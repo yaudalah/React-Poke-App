@@ -32,7 +32,7 @@ const Description = () => {
   return (
     <>
         {
-          Array.from(pokemon).map((pokemon) =>{
+          Array.from(pokemon).map((pokemon, index) =>{
             return (
               <Container sx={{color: "white", display: "flex", padding: "5em"}}>                
                 <button className='btn-add' onClick={() => {navigate(-1)}} style={{width: "200px"}}> Back</button>

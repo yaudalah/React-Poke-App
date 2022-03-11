@@ -23,13 +23,13 @@ const { pokemonCarts, deletePokemonFromCart } = usePokemon();
             >
               <img
                 onClick={() => navigate(`/description/${pokemon?.data?.id}`)}              
-                src={pokemon?.data?.sprites?.front_default}
+                src={pokemon?.data?.sprites?.other.dream_world.front_default}
                 alt="span"
                 style={{ height: 200 }}
               />
-              <p key={pokemon.id} style={{ color: "white" }}>
+              <h3 key={pokemon.id} style={{ color: "white" }}>
                 {pokemon?.data?.name}
-              </p>
+              </h3>
               <button
               onClick={()=>{
                 deletePokemonFromCart(index)
