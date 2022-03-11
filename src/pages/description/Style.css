@@ -1,9 +1,9 @@
-button {
+.button-pokedex {
     margin-top: 4em;
     width: 100%;
     cursor: pointer;
     border: 0px solid black;
-    background-color: green;
+    border-radius: 5px;
+    background-color: rgb(138, 19, 19);
     color: white;
-
 }

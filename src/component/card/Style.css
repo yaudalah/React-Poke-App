@@ -18,20 +18,11 @@
 .card > div > span > img {
     cursor: pointer;
     width: 150px;
+    height: 200px;
 }
 
 .card-name {
-    font-size: 1.5em;
-
-}
-
-.description {
-    display: flex;
-    flex-direction: column;
-    margin-top: 2em;
-    border: 1px solid burlywood;
-    width: 50%;
-    background-color: rgba(0, 0, 0, 0.404);
+    font-size: 2em;
 }
 
 .btn-add {

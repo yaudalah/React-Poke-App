@@ -1,4 +1,5 @@
-import "./Style.css"
+import { Grid } from "@mui/material";
+import "./Style.css";
 
 function Card({pokemon, navigate, addPokemonToCart}) {
 
@@ -13,7 +14,7 @@ function Card({pokemon, navigate, addPokemonToCart}) {
                                     navigate(`/description/${pokemon?.data?.id}`)
                                 }}
                                 >
-                                    <img src={pokemon?.data?.sprites?.other.dream_world.front_default} alt='Digimon' />
+                                    <img src={pokemon?.data?.sprites?.other.dream_world.front_default} alt="Digimon" />
                                 </span>
                             </div>
                             <div className="card-name">

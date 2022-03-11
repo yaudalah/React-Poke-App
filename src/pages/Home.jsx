@@ -8,7 +8,7 @@ const { pokemonCarts, deletePokemonFromCart } = usePokemon();
   return (
     <div className="App">
       <h1>My Pokemons</h1>
-      <div style={{ display: "flex", flexWrap: "wrap" }}>
+      <div style={{ display: "flex", flexWrap: "wrap", justifyContent:"center" }}>
         {Array.from(pokemonCarts || []).map((pokemon, index) => {
           return (
             <span
@@ -34,6 +34,7 @@ const { pokemonCarts, deletePokemonFromCart } = usePokemon();
               onClick={()=>{
                 deletePokemonFromCart(index)
               }}
+              className="button-pokedex"
               >Delete</button>
             </span>
           );

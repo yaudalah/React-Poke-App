@@ -1,3 +1,4 @@
+import { Container } from '@mui/material';
 import React, { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { getPokemonsDetails } from '../../services/axios';
@@ -33,20 +34,18 @@ const Description = () => {
         {
           Array.from(pokemon).map((pokemon) =>{
             return (
-              <div className='card'>                
-                <h2>Detail</h2>
-                <div>
-                    <img src={pokemon?.data?.sprites?.other.dream_world.front_default} alt='Digimon' />
+              <Container sx={{color: "white", display: "flex", padding: "5em"}}>                
+                <button className='btn-add' onClick={() => {navigate(-1)}} style={{width: "200px"}}> Back</button>
+                <div style={{marginRight: "2em"}}>
+                  <img src={pokemon?.sprites?.other.dream_world.front_default} alt='Digimon' style={{marginRight: "2em"}} />
                 </div>                
-                <p className='card-name'>{pokemon.name}</p>
-                <div className="description">
+                <div className="description" >
+                  <h3 className='card-name' style={{marginTop: "0"}}>{pokemon.name}</h3>
                     <p>Base EXP: {pokemon.base_experience}</p>
                     <p>Weight: {pokemon.weight}</p>
                     <p>Height: {pokemon.height}</p>
-
                 </div>
-                <button onClick={() => {navigate(-1)}}>back</button>
-              </div>
+              </Container>
             )
 
           })
