@@ -1,4 +1,5 @@
 import { createContext, useContext, useEffect, useReducer } from "react";
+import { ADD_POKEMON_TO_CART, DELETE_POKEMON_FROM_CART } from "../constant/actionType";
 
 const SMStateContext = createContext();
 const SMUpdaterContext = createContext();
@@ -6,12 +7,12 @@ const SMUpdaterContext = createContext();
 const pokeReducer = (state, action) => {
   console.log(action)
   switch (action.type) {
-    case "ADD_POKEMON_TO_CART":
+    case ADD_POKEMON_TO_CART:
       return {
         ...state,
         pokemonCarts:[...state.pokemonCarts, action.data],
       };
-    case "DELETE_POKEMON_FROM_CART":
+    case DELETE_POKEMON_FROM_CART:
       return {
         ...state,
         pokemonCarts: state.pokemonCarts.filter((item, index) => index !== action.index)

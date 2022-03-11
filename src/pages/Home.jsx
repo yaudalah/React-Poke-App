@@ -9,7 +9,7 @@ const { pokemonCarts, deletePokemonFromCart } = usePokemon();
     <div className="App">
       <h1>My Pokemons</h1>
       <div style={{ display: "flex", flexWrap: "wrap" }}>
-        {Array.from(pokemonCarts || []).map((item, index) => {
+        {Array.from(pokemonCarts || []).map((pokemon, index) => {
           return (
             <span
               style={{
@@ -22,13 +22,13 @@ const { pokemonCarts, deletePokemonFromCart } = usePokemon();
               }}
             >
               <img
-                onClick={() => navigate(`/catalogue/${item?.data.id}`)}              
-                src={item?.data?.sprites?.front_default}
+                onClick={() => navigate(`/description/${pokemon?.data?.id}`)}              
+                src={pokemon?.data?.sprites?.front_default}
                 alt="span"
                 style={{ height: 200 }}
               />
-              <p key={item.id} style={{ color: "white" }}>
-                {item?.data?.name}
+              <p key={pokemon.id} style={{ color: "white" }}>
+                {pokemon?.data?.name}
               </p>
               <button
               onClick={()=>{

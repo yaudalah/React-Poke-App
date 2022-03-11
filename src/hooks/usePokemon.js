@@ -1,3 +1,4 @@
+import { ADD_POKEMON_TO_CART, DELETE_POKEMON_FROM_CART } from "../constant/actionType";
 import { useSMState, useSMUpdater } from "./useSM";
   
   const usePokemon = () => {
@@ -6,13 +7,13 @@ import { useSMState, useSMUpdater } from "./useSM";
     
     const addPokemonToCart = (data) => {
         dispatch({
-            type: "ADD_POKEMON_TO_CART",
+            type: ADD_POKEMON_TO_CART,
             data
         })
     }
     const deletePokemonFromCart = (index) => {
       dispatch({
-          type: "DELETE_POKEMON_FROM_CART",
+          type: DELETE_POKEMON_FROM_CART,
           index: index
       })
     }    
