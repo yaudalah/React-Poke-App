@@ -1,9 +1,37 @@
 .button-pokedex {
     margin-top: 4em;
     width: 100%;
+    height: 3em;
     cursor: pointer;
     border: 0px solid black;
     border-radius: 5px;
     background-color: rgb(138, 19, 19);
     color: white;
+}
+
+.button-pokedex:hover {
+    background: whitesmoke;
+    color: black;
+    border: 3px solid rgb(138, 19, 19);
+}
+
+@media screen and (max-width: 480px) {
+    .detail-container {
+        margin-top: 2em;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .img-poke-detail {
+        margin: 0 !important;
+    }
+}
+
+
+@media screen and (min-width: 900px) {
+    .img-poke-detail {
+        height: 456px;
+        width: 415px;
+    }
 }

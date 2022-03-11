@@ -9,7 +9,8 @@ function Card({pokemon, navigate, addPokemonToCart}) {
                     return (
                         <div className="card">
                             <div>
-                                <span onClick={() => {
+                                <span onClick={(e) => {
+                                    e.preventDefault();
                                     navigate(`/description/${pokemon?.data?.id}`)
                                 }}
                                 >
@@ -20,7 +21,7 @@ function Card({pokemon, navigate, addPokemonToCart}) {
                                 {pokemon?.data?.name}
                             </div>
                             <button 
-                            className="btn-add" 
+                            className="btn-add"
                             title="add to Pokedex"
                             onClick={(e) => {
                                 e.preventDefault();

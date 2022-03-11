@@ -7,9 +7,10 @@ h1 {
 .container {
     display: flex;
     background-color: transparent;
-    justify-content: flex-start;
+    justify-content: space-between;
     flex-wrap: wrap;
     column-gap: 5%;
     row-gap: 1em;
     margin: 1em;
 }
+

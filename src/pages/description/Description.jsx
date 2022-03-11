@@ -34,10 +34,10 @@ const Description = () => {
         {
           Array.from(pokemon).map((pokemon, index) =>{
             return (
-              <Container sx={{color: "white", display: "flex", padding: "5em"}}>                
-                <button className='btn-add' onClick={() => {navigate(-1)}} style={{width: "200px"}}> Back</button>
+              <Container className='detail-container' sx={{color: "white", display: "flex", padding: "3rem"}}>                
+                <button className='btn-add' onClick={() => {navigate(-1)}} style={{width: "200px", backgroundColor: "red"}}> Back</button>
                 <div style={{marginRight: "2em"}}>
-                  <img src={pokemon?.sprites?.other.dream_world.front_default} alt='Digimon' style={{marginRight: "2em"}} />
+                  <img className='img-poke-detail' src={pokemon?.sprites?.other.dream_world.front_default} alt='Digimon' style={{marginRight: "2em"}} />
                 </div>                
                 <div className="description" >
                   <h3 className='card-name' style={{marginTop: "0"}}>{pokemon.name}</h3>

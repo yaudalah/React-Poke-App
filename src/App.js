@@ -1,10 +1,10 @@
+import { Container } from "@mui/material";
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import Header from "./component/header";
 import Catalogue from './pages/catalogue/Catalogue.jsx';
 import Description from './pages/description/Description';
-import Home from './pages/Home';
-import { Container } from "@mui/material";
-import Header from "./component/header";
+import Home from './pages/pokedex/Home';
 
 const sections = [
   {
@@ -21,7 +21,7 @@ const sections = [
 function App() {
   return (
     <>
-    <Header title="React-Poke-App" sections={sections} />
+    <Header title="Pokecang" sections={sections} />
       <Container>
         <Routes>
           <Route path="/" element={<Home />} />

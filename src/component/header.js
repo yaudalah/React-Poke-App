@@ -16,7 +16,7 @@ function Header(props) {
       >
         <Typography
           component="h2"
-          variant="h5"
+          variant="h3"
           color="Orange"
           align="center"
           noWrap
@@ -29,7 +29,7 @@ function Header(props) {
         className="toolbar"
         component="nav"
         variant="dense"
-        sx={{ justifyContent: "space-evenly", overflowX: "auto" }}
+        sx={{ justifyContent: "space-evenly", overflowX: "auto", marginTop: "2em" }}
       >
         {sections.map((section) => (
           <Link to={section.url} key={section.title}>

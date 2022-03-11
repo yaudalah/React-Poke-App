@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
-import usePokemon from "../hooks/usePokemon";
+import usePokemon from "../../hooks/usePokemon";
+import "./Style.css"
 
 function Home() {
 const navigate = useNavigate()
