@@ -36,7 +36,7 @@ const Description = () => {
               <div className='card'>                
                 <h2>Detail</h2>
                 <div>
-                    <img src={pokemon.sprites?.front_default} alt='Digimon' />
+                    <img src={pokemon?.data?.sprites?.other.dream_world.front_default} alt='Digimon' />
                 </div>                
                 <p className='card-name'>{pokemon.name}</p>
                 <div className="description">
