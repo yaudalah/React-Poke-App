@@ -1,11 +1,11 @@
 import "./Style.css"
 
-function Card({pokemon, navigate}) {
+function Card({pokemon, navigate, addPokemonToCart}) {
 
     return(
         <>
             {
-                pokemon.map(pokemon => {
+                pokemon.map((pokemon,index) => {
                     return (
                         <div className="card">
                             <div>
@@ -19,7 +19,14 @@ function Card({pokemon, navigate}) {
                             <div className="card-name">
                                 {pokemon?.data?.name}
                             </div>
-                            <button className="btn-add" title="add to Pokedex">
+                            <button 
+                            className="btn-add" 
+                            title="add to Pokedex"
+                            onClick={(e) => {
+                                e.preventDefault();
+                                addPokemonToCart(pokemon);
+                              }}                            
+                            >
                                 +
                             </button>
                         </div>

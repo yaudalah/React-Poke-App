@@ -4,9 +4,11 @@ import "./Style.css"
 import "../../App.css"
 import Card from '../../component/card/Card'
 import { useNavigate} from 'react-router-dom'
+import usePokemon from '../../hooks/usePokemon'
 
 
 const Catalouge = () => {
+    const { addPokemonToCart } = usePokemon();
     const navigate = useNavigate();
     const [pokemon, setPokemon] = useState([]);
 
@@ -30,7 +32,11 @@ const Catalouge = () => {
         <> 
             <h1>Catch'em</h1>
             <div className="container">
-                <Card  pokemon={pokemon} navigate={navigate} />      
+                <Card  
+                pokemon={pokemon} 
+                navigate={navigate} 
+                addPokemonToCart={addPokemonToCart}
+                />      
             </div>
         </>
     )
