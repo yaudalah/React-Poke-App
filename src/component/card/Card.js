@@ -1,4 +1,3 @@
-import { Grid } from "@mui/material";
 import "./Style.css";
 
 function Card({pokemon, navigate, addPokemonToCart}) {
