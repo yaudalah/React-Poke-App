@@ -1,9 +1,8 @@
 import { Container } from '@mui/material';
-import { light } from '@mui/material/styles/createPalette';
-import React, { useEffect, useState } from 'react'
-import { useNavigate, useParams } from 'react-router-dom'
+import React, { useEffect, useState } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
 import { getPokemonsDetails } from '../../services/axios';
-import "./Style.css"
+import "./Style.css";
 
 const Description = () => {
 
@@ -16,7 +15,6 @@ const Description = () => {
       fetchPokemonDetails(params?.id);
     }
   },[params])
-  
 
   const fetchPokemonDetails = async(id) => {
     try {
@@ -38,7 +36,11 @@ const Description = () => {
               <Container className='detail-container' sx={{color: "white", display: "flex", padding: "3rem"}}>                
                 
                 <div style={{marginRight: "2em"}}>
-                  <img className='img-poke-detail' src={pokemon?.sprites?.other.dream_world.front_default} alt='Digimon' style={{marginRight: "2em"}} />
+                  <img 
+                  className='img-poke-detail' 
+                  src={pokemon?.sprites?.other.dream_world.front_default} 
+                  alt='Digimon' 
+                  style={{marginRight: "2em"}} />
                 </div>                
                 <div className="description" >
                   <h3 className='card-name' style={{marginTop: "0"}}>{pokemon.name}</h3>
@@ -52,14 +54,18 @@ const Description = () => {
                       })}
                     </div>
                 </div>
-                <button className='btn-add' onClick={() => {navigate(-1)}} style={{width: "150px", backgroundColor: "rgb(138, 19, 19)"}}> Back </button>
+                <button 
+                className='btn-add' 
+                onClick={() => {navigate(-1)}} 
+                style={{width: "150px", backgroundColor: "rgb(138, 19, 19)"}}>
+                  Back 
+                </button>
               </Container>
             )
 
           })
         }
     </>
-    
   )
 }
 
