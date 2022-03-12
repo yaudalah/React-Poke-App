@@ -25,6 +25,8 @@
 
     .img-poke-detail {
         margin: 0 !important;
+        width: 250px;
+        max-height: 300px;
     }
 }
 
